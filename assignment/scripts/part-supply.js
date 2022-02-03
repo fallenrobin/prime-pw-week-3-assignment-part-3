@@ -79,7 +79,8 @@ console.log('9. Filling boxes with a "while" loop');
 i = 572
 while (i>=6) {
     i-=7;
-    // console.log(i);
+    // console.log(i); //this will show me every loop as the 572 counts decrements by 7
 }
+//Idea: What if every loop creates a "filled box" (maybe just the number 1) in an array called "boxes," so that later I can console.log(boxes.Length);
 console.log("There are","____","filled boxes.");
-console.log("There are", i, "parts left over.");
+console.log("There are", i, "parts left over.");//I discovered that automatically i will reflect the 'remainder' number of parts once the loop jumps out of itself
