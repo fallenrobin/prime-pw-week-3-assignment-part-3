@@ -79,5 +79,7 @@ console.log('9. Filling boxes with a "while" loop');
 i = 572
 while (i>=6) {
     i-=7;
-    console.log(i);
+    // console.log(i);
 }
+console.log("There are","____","filled boxes.");
+console.log("There are", i, "parts left over.");
