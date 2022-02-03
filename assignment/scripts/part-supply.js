@@ -22,6 +22,7 @@ console.log(removedItem);
 
 // 5. A delivery of 25 more parts arrived. Add the value 25 to the end of the array
 console.log('5. Adding 25 to supplyChanges.');
+supplyChanges.push(25);
 
 // 6. Write a `for` loop that shows each value in the 'supplyChanges' array
 //    Use a console.log formatted as follows, where x is the value from the array
@@ -29,16 +30,44 @@ console.log('5. Adding 25 to supplyChanges.');
 //    - if the value is 0, log 'No Change.'
 //    - if the value is negative, format the log as 'Removed x parts.'
 console.log('6. Showing supplyChanges...');
-
+for ( i = 0; i < 6; i++) { //Why can't I use supplyChanges.length for the condition instead of 6? In the week 3 video for Loops Practical he does for hand.length when looping through a hand (array) of cards.
+  if (supplyChanges[i]>0){
+  console.log("Added", supplyChanges[i], "parts.");
+}
+    if (supplyChanges[i]===0) {
+      console.log("No change.",supplyChanges[i], "parts.");
+    }
+      if (supplyChanges[i]<0) {
+        console.log("Removed", supplyChanges[i], "parts.");
+      }
+}
 
 // STRETCH GOALS
 console.log('---  Stretch Goals  ---');
-// 7. Rewrite the `for` loop from #6 as a `for of` loop.
 console.log('7. Showing supplyChanges with "for of" loop');
+// 7. Rewrite the `for` loop from #6 as a `for of` loop.
+for (number of supplyChanges) {
+  if (number>0) {
+    console.log("Added", number, "parts.")
+  };
+    if (number===0) {
+      console.log("No change.",number, "parts.")
+    }
+      if (number<0) {
+        console.log("Removed", number, "parts.")
+      }
+}
 
 // 8. Write a loop to determine the total number of parts available by
 //    adding up all the numbers in the 'supplyChanges' array.
 console.log('8. Total supplies available is:');
+sum = 0
+for (i = 0; i < supplyChanges.length; i++) {
+sum+=supplyChanges[i];
+// console.log(sum);//<= I discovered this will log each loop, showing the math each time.
+}
+console.log(sum);
+//Lerned method from: https://www.delftstack.com/howto/javascript/javascript-sum-of-array/
 
 // 9. We have a large stash of parts in our warehouse that we
 //    need to box up and get ready for shipment.
@@ -47,3 +76,8 @@ console.log('8. Total supplies available is:');
 //    no more boxes can be filled.
 //    Then log how many boxes were filled, and how many parts are left over.
 console.log('9. Filling boxes with a "while" loop');
+i = 572
+while (i>=6) {
+    i-=7;
+    console.log(i);
+}
