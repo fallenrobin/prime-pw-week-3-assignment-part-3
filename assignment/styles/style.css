@@ -1,4 +1,5 @@
 /* give your assignment a fun background color */
+<<<<<<< HEAD
 body {
 background: 
         linear-gradient(red, transparent),
@@ -6,3 +7,6 @@ background:
         linear-gradient(to top right, blue, transparent);
     background-blend-mode: screen;
 }
+=======
+* {background-color: pink}
+>>>>>>> 25ef863917e468c22916546cfa004f54568505a9
