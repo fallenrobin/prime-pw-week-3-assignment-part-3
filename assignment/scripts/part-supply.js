@@ -30,15 +30,15 @@ supplyChanges.push(25);
 //    - if the value is 0, log 'No Change.'
 //    - if the value is negative, format the log as 'Removed x parts.'
 console.log('6. Showing supplyChanges...');
-for ( i = 0; i < 6; i++) { //Why can't I use supplyChanges.length for the condition instead of 6? In the week 3 video for Loops Practical he does for hand.length when looping through a hand (array) of cards.
-  if (supplyChanges[i]>0){
-  console.log("Added", supplyChanges[i], "parts.");
+for ( x = 0; x < 6; x++) { //Why can't I use supplyChanges.length for the condition instead of 6? In the week 3 video for Loops Practical he does for hand.length when looping through a hand (array) of cards.
+  if (supplyChanges[x]>0){
+  console.log(`Added ${supplyChanges[x]} parts.`);
 }
-    if (supplyChanges[i]===0) {
-      console.log("No change.",supplyChanges[i], "parts.");
+  else if (supplyChanges[x]===0) {
+      console.log(`No change. (${supplyChanges[x]})`);
     }
-      if (supplyChanges[i]<0) {
-        console.log("Removed", supplyChanges[i], "parts.");
+  else {
+        console.log(`Removed ${supplyChanges[x]} parts.`);
       }
 } //is it better to have this as else if/else statements? It works this way for me.
 
@@ -48,14 +48,14 @@ console.log('7. Showing supplyChanges with "for of" loop');
 // 7. Rewrite the `for` loop from #6 as a `for of` loop.
 for (number of supplyChanges) {
   if (number>0) {
-    console.log("Added", number, "parts.")
-  };
-    if (number===0) {
-      console.log("No change.",number, "parts.")
+    console.log(`Added ${number} parts.`)
+  }
+  else if (number===0) {
+    console.log(`No change. ${number} parts.`)
     }
-      if (number<0) {
-        console.log("Removed", number, "parts.")
-      }
+  else //note to self: do NOT put anything in parentheses for ELSE statements!
+    console.log(`Removed ${number} parts.`)
+    //why do i not put curly braces on the else statement? It broke it when I did...
 }
 
 // 8. Write a loop to determine the total number of parts available by
@@ -80,9 +80,9 @@ i = 572
 filledBoxes = []
 while (i>=6) {
     i-=7;
-    // console.log(i); //this will show me every loop as the 572 counts decrements by 7
-    filledBoxes.push[i];
+     //console.log(i); //this will show me every loop as the 572 counts decrements by 7
+    filledBoxes.push([i]);
 }
 //Idea: What if every loop creates a "filled box" (maybe just the number 1) in an array called "boxes," so that later I can console.log(boxes.Length);
-console.log(`There are ${filledBoxes.length}filled boxes.`);
-console.log("There are", i, "parts left over.");//I discovered that automatically i will reflect the 'remainder' number of parts once the loop jumps out of itself
+console.log(`There are ${filledBoxes.length} filled boxes.`);
+console.log(`There are ${i} parts left.`);//I discovered that automatically i will reflect the 'remainder' number of parts once the loop jumps out of itself
