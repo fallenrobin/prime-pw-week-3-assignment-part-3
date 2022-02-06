@@ -81,12 +81,13 @@ console.log(sum);
 console.log('9. Filling boxes with a "while" loop');
 i = 572
 
-filledBoxes = []
+filledBoxes = [];
 while (i>=6) {
     i-=7;
      //console.log(i); //this will show me every loop as the 572 counts decrements by 7
-    filledBoxes.push([i]);
+    filledBoxes.push(i);//Note to self: .push is followed by regular parentheses and NOT []
 }
+
 //This was pretty much my idea for the logic, but I got the technique from here: https://dev.to/ljnce/map-foreach-for-three-ways-for-create-an-array-and-push-it-4893
 console.log(`There are ${filledBoxes.length} filled boxes.`);
 console.log(`There are ${i} parts left.`);//I discovered that automatically i will reflect the 'remainder' number of parts once the loop jumps out of itself
